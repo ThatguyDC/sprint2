@@ -23,10 +23,9 @@
             $('.sidenav').sidenav();
             $('.slider').slider();
             $(".button-collapse").sideNav();
-            //$('.slider').slider({fullWidth: true, indicators: false, height: 500, interval: 6000});
-            $('.scrollspy').scrollSpy()
+            $('.scrollspy').scrollSpy();
+            $('.parallax').parallax();
         });
-
     </script>
 </head>
 
@@ -53,7 +52,7 @@
     }
 
     .aboutBox {
-        font-size: 30px;
+        font-size: 20px;
     }
 
     #submitJoin {
@@ -62,30 +61,13 @@
         padding: inherit;
 
     }
-
-    /*
-             
-         .btn-grad {
-            background-image: linear-gradient(to right, #870000 0%, #190A05  51%, #870000  100%);
-            margin: 10px;
-            padding: 15px 45px;
-            text-align: center;
-            text-transform: uppercase;
-            transition: 0.5s;
-            background-size: 200% auto;
-            color: white;            
-            box-shadow: 0 0 20px #eee;
-            border-radius: 10px;
-            display: block;
-          }
-
-          .btn-grad:hover {
-            background-position: right center; /* change the direction of the change here */
-    color: #fff;
-    text-decoration: none;
+    
+    #resumeUpload {
+        float: left;
+        margin: auto;
+        margin-top: 0%;
+        border: 2px solid black;
     }
-
-    */
 
 </style>
 
@@ -115,33 +97,34 @@
 
     <div class="row">
 
-        <img src="images/Madalina.jpg" alt="Madalina's headshot photo" width="30%">
+        <img class = "circle responsive-img" src="images/Madalina.jpg" alt="Madalina's headshot photo" width="30%" id = "Madalina">
         <ul class="aboutBox">Hi my name is Madalina, and I’m an ET Leader at Miami University with a major in Games + Sim!</ul>
     </div>
     <hr>
     <div class="row">
 
-        <img src="images/Sam.JPG" alt="Sam's headshot photo" width="30%">
+        <img class = "circle responsive-img" src="images/Sam.JPG" alt="Sam's headshot photo" width="30%" id = "Sam">
         <ul class="aboutBox">I'm Sam an I am overly obsessed with ketchup and starwars battle front 2 classic 2005</ul>
     </div>
     <hr>
     <div class="row">
 
-        <img src="images/Kendall.JPG" alt="Kendall's headshot photo" width="30%">
+        <img class = "circle responsive-img" src="images/Kendall.JPG" alt="Kendall's headshot photo" width="30%" id = "Kendall">
         <ul class="aboutBox">Hi! I'm Kendall, and I was a dancer for 15 years and love chai tea lattes.</ul>
     </div>
     <hr>
     <div class="row">
 
-
-        <img src="images/Davis.jpg" alt="Davis' headshot photo" width="30%">
+        <div class = "flow-text">
+        <img class = "circle responsive-img" src="images/Davis.jpg" alt="Davis' headshot photo" width="30%" id = "Davis">
         <ul class="aboutBox">Hi! My name is Davis Cowper, a Games and Simulation major at Miami University with a focus on development and heavy interest in production. I’ve worked on various projects such as my personal website, a sidescroller minigame, and a pinball prototype. I initially found interest in games at a young age, starting off with the DS and the Wii. I eventually graduated from games such as Wii Sports Resort and Pokemon to Minecraft, Halo, and more on Xbox. Eventually, I became obsessed with Destiny, the newly born child of Bungie’s development team in 2014. I played on and off until about 2019, where I became a hardcore, almost professional player of the game, completing endgame content and challenges routinely. This love and passion brought me to where I am today, attempting to learn the intricacies of development and production in order to deliver that same love and passion of video games to players around the world. In addition to my love of games, I am a mentor in Kode2Learn, a club at Miami University which mentors and teaches elementary age students about the fundamentals of computer science and technology. This experience has helped me grow to understand the challenges of teaching, and developed the ability to assist in challenging academic situations, such as large group development projects or design research. I have a diverse set of skills and talents that would be useful to anyone who needs an organized, knowledgeable, and passionate individual to aid in development, junior mentorship, or principled design work.
         </ul>
+        </div>
     </div>
     <hr>
     <div class="row">
 
-        <img src="images/Adriana.jpg.jpg" alt="Adrianna's headshot photo" width="30%">
+        <img class = "circle responsive-img" src="images/Adriana.jpg.jpg" alt="Adrianna's headshot photo" width="30%" id = "Adrianna">
         <ul class="aboutBox">Adriana Enriquez is a current Freshman at Miami University who is studying ETBD with a Co-major of Art Therapy. Her hometown is Mason, Ohio and she enjoys drawing digital art in her free time. </ul>
 
     </div>
@@ -190,8 +173,15 @@
 
                         <div class="input-field col s6">
                             <form>
-                                <label for="fileUpload">Upload file</label>
-                                <input type="file" id="fileUpload" />
+                                <div class="file-field input-field">
+                                    <div class="btn-grad" id = "resumeUpload">
+                                        <span>File</span>
+                                        <input type="file" multiple>
+                                    </div>
+                                    <div class="file-path-wrapper">
+                                        <input class="file-path validate" type="text" placeholder="Upload one or more files">
+                                    </div>
+                                </div>
                             </form>
 
                         </div>
