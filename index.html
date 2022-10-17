@@ -21,6 +21,15 @@
     <!--  Scripts-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.sidenav').sidenav();
+            $('.slider').slider();
+            $(".button-collapse").sideNav();
+            $('.scrollspy').scrollSpy();
+            $('.parallax').parallax();
+        });
+    </script>
 
 </head>
 <style>
@@ -28,15 +37,35 @@
         margin-left: 20%;
     }
 
+    .chip {
+        float: left;
+        margin: 5%;
+        display: inline-block;
+    }
+    .slider .indicators .indicator-item.active {
+    background-color: #964141;
+}
+
     #pageRef {
         width: 60%;
         padding: inherit;
+    }
+
+    #teamPic {
+        width: 100%;
+        margin-bottom: 20%;
+    }
+    body {
+        background-position: center;
+        
     }
 </style>
 
 
 <body>
     <!----THIS IS THE BODY---->
+
+
 
     <body style="<backgroud-color: lightslategrey">
         <h1 id="top"> Welcome to Disrupt.Games</h1>
@@ -46,37 +75,58 @@
 
         <!--
         
-        <div class="navbar-fixed">
-      <nav>
-          <div class="nav-wrapper">
-             <a href="#!" class="brand-logo">Logo</a>
-             <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-             <ul class="right hide-on-med-and-down">
-                <li><a href="sass.html">Sass</a></li>
-                <li><a href="badges.html">Components</a></li>
-                <li><a href="collapsible.html">Javascript</a></li>
-                <li><a href="mobile.html">Mobile</a></li>
-            </ul>
-         </div>
-      </nav>
-   </div>
-   <ul class="side-nav" id="mobile-demo">
-        <li><a href="sass.html">Sass</a></li>
-        <li><a href="badges.html">Components</a></li>
-        <li><a href="collapsible.html">Javascript</a></li>
-        <li><a href="mobile.html">Mobile</a></li>
-  </ul>
-</body> -->
+      
         <!-- menubar -->
-        <ul id="menubar">
-            <li><a class="menu" href="index.html">Home</a></li>
-            <li><a class="menu" href="info.html">Info</a></li>
-            <li><a class="menu" href="faq.html">Frequently Asked Questions</a></li>
-            <li><a class="menu" href="about.html">About Our Team</a></li>
-            <li><a class="menu" href="contact.html">Contact Us</a></li>
-        </ul>
+                <ul id="menubar">
+                <li><a class="menu" href="index.html">Home</a></li>
+                <li><a class="menu" href="info.html">Info</a></li>
+                <li><a class="menu" href="faq.html">Frequently Asked Questions</a></li>
+                <li><a class="menu" href="about.html">About Our Team</a></li>
+                <li><a class="menu" href="contact.html">Contact Us</a></li>
+            </ul>
+       
 
         <hr>
+        <!-- Slider -->
+        
+        <section class="slider">
+            <ul class="slides">
+                <li>
+                    <img src="images/pexels-adrien-olichon.jpg"> <!-- random image -->
+                    <div class="caption center-align">
+                        <h1>Davis Tech and Consulting</h1>
+                        <h5 class="light grey-text text-lighten-3" id="slideSubhead">Student-Built, Run, and Funded. </h5>
+                        <a class="btn-grad" id="slidebutton">Learn More</a>
+                    </div>
+                </li>
+                <li>
+                    <img src="images/pexels-adrien-olichon.jpg"> <!-- random image -->
+                    <div class="caption center-align">
+                        <h1>Experienced and Available</h1>
+                        <h5 class="light grey-text text-lighten-3" id="slideSubhead">Flexible plans and hours. </h5>
+                        <a class="btn-grad" id="slidebutton">Learn More</a>
+
+                    </div>
+                </li>
+                <li>
+                    <img src="images/pexels-adrien-olichon.jpg"> <!-- random image -->
+                    <div class="caption center-align">
+                        <h1>Contact Us Today.</h1>
+                        <h5 class="light grey-text text-lighten-3" id="slideSubhead">Take your tech stack to the stars. </h5>
+                        <a class="btn-grad" id="slidebutton">Learn More</a>
+                    </div>
+                </li>
+                <li>
+                    <img src="images/pexels-adrien-olichon.jpg"> <!-- random image -->
+                    <div class="caption center-align">
+                        <h1>Davis Tech and Consulting</h1>
+                        <h5 class="light grey-text text-lighten-3" id="slideSubhead">Student-Built, Run, and Funded. </h5>
+                        <a class="btn-grad" id="slidebutton">Learn More</a>
+                    </div>
+                </li>
+                
+            </ul>
+        </section>
 
 
         <div class="row">
@@ -120,16 +170,38 @@
 
         <div class="row">
             <div class="column">
-                <img src="images/team.jpg" alt="team" style="width:100%">
+                <img src="images/team.jpg" alt="team" id="teamPic">
+                <div class="chip pink darken-4">
+                    <img src="images/Kendall.JPG">
+                    Kendall
+                </div>
+                <div class="chip red darken-4">
+                    <img src="images/Adriana.jpg.jpg">
+                    Adrianna
+                </div>
+                <div class="chip purple darken-4">
+                    <img src="images/Sam.JPG">
+                    Sam
+                </div>
+                <div class="chip teal darken-2">
+                    <img src="images/Madalina.jpg">
+                    Madalina
+                </div>
+                <div class="chip indigo">
+                    <img src="images/Davis.jpg">
+                    Davis
+                </div>
             </div>
             <div class="column">
                 <h3><u>About Our Team</u></h3>
                 <br>
                 <ul>Meet the team who brought you the information presented on this website! We're a class-formed group who is passionate about new technologies, and specifically with a love for video games in general.</ul>
                 <br>
-
                 <a class="btn-grad" id="pageRef" href="about.html">About Us Page</a>
+
+
             </div>
+
         </div>
         <hr>
 
@@ -152,6 +224,9 @@
         </div>
 
         <hr>
+
+        
+        
 
 
 
