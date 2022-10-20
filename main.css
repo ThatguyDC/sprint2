@@ -5,10 +5,15 @@ body {
     width: 100%;
     margin: 15px auto;
     padding: 15px 25px;
-    border: 3px solid #3b0505;
+    border: 3px solid #000000;
     background-color: black;
     text-align: center;
     color: whitesmoke;
+}
+
+
+* {
+    box-sizing: border-box;
 }
 
 
@@ -41,14 +46,14 @@ li a:hover {
     background-color: #626060;
 }
 
-
-* {
-    box-sizing: border-box;
-}
-
 hr {
     width: 80%;
     border-color: black;
+}
+
+h1,h2,h3 {
+    color: aqua;
+    font-family: Georgia, Arial, Helvetica;
 }
 
 .header {
@@ -84,7 +89,7 @@ hr {
 }
 
 .btn-grad {
-    background-image: linear-gradient(to right, #870000 0%, #190A05 51%, #870000 100%);
+    background-image: linear-gradient(to right, #f7f7f7 0%, #000000 51%, #00ffec 100%);
     margin: auto;
     width: 20%;
     padding: 15px 45px;
@@ -92,7 +97,7 @@ hr {
     text-transform: uppercase;
     transition: 0.5s;
     background-size: 200% auto;
-    color: white;
+    color: black;
     border-radius: 10px;
     border-color: black;
     display: block;
@@ -108,6 +113,22 @@ hr {
 
 .menu {
     text-align: center;
+    background-color:  gray;
+    border-color: black;
 }
+
+#submitJoin {
+        margin: auto;
+        width: 100%;
+        padding: inherit;
+
+    }
+    
+    #resumeUpload {
+        float: left;
+        margin: auto;
+        margin-top: 0%;
+        border: 2px solid black;
+    }
 
 
