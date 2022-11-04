@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+
+<!--Home Page of Disruptive Tech website-->
+
+
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>THE BLUE ONE</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!----this is head part---->
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.sidenav').sidenav();
+            $('.slider').slider();
+
+            $('.parallax').parallax();
+            $('.fixed-action-btn').floatingActionButton();
+        });
+
+    </script>
+</head>
+
+<style>
+    .intro {
+        float: left;
+    }
+
+    img {
+        float: left;
+
+        display: inline-block;
+    }
+
+    .personaIMG {
+        height: 100%;
+        max-width: 100%;
+        border-radius: 10px;
+    }
+
+    .Sam {
+        content: "";
+        clear: both;
+        display: table;
+        height: 100px;
+    }
+
+    .row {
+        margin: 0 10% 0 10%;
+    }
+
+    .aboutBox {
+        font-size: 20px;
+        padding-top: 5%;
+    }
+
+    .card {
+        width: 90%;
+
+        margin: 20px auto;
+        background-color: aqua;
+        border-radius: 20px;
+        border-color: darkgray;
+
+
+    }
+
+    .card-reveal {
+        border-radius: 20px;
+        background-color: darkgray;
+    }
+
+    .activator {
+        width: 100%;
+        height: auto;
+        border-color: aqua;
+    }
+
+    #submitJoin {
+        margin: auto;
+        width: 100%;
+        padding: inherit;
+
+    }
+
+    #resumeUpload {
+        float: left;
+        margin: auto;
+        margin-top: 0%;
+        border: 2px solid black;
+    }
+
+</style>
+
+<body>
+    <!----THIS IS THE BODY---->
+
+
+    <h1 id="top">About Us</h1>
+    <hr>
+
+    <!--Menu Bar-->
+    <ul id="menubar">
+        <li><a class="menu" href="index.html">Home</a></li>
+        <li><a class="menu" href="info.html">Info</a></li>
+        <li><a class="menu" href="faq.html">Frequently Asked Questions</a></li>
+        <li><a class="menu" href="about.html">About Our Team</a></li>
+        <li><a class="menu" href="contact.html">Contact Us</a></li>
+    </ul>
+
+    <hr>
+    <br>
+    <br>
+
+
+
+    <div class="fixed-action-btn">
+        <a class="btn-floating btn-large cyan">
+            <i class="large material-icons">mode_edit</i>
+        </a>
+        <ul>
+            <li><a class="btn-floating red" href="contact.html"><i class="material-icons">insert_chart</i></a></li>
+            <li><a class="btn-floating yellow darken-1" href="contact.html"><i class="material-icons">format_quote</i></a></li>
+            <li><a class="btn-floating green" href="contact.html"><i class="material-icons">publish</i></a></li>
+            <li><a class="btn-floating blue"><img src="images/Madalina.jpg" alt="Madalina's headshot photo" width="100%" height="100%" id="Madalina"></a></li>
+        </ul>
+    </div>
+
+
+
+
+    <div class="teamMeet">
+        <h2>Meet Our Team!</h2>
+    </div>
+
+    <div class="row">
+        <div class="col s12 m6">
+
+
+            <div class="card">
+                <div class="card-image waves-effect waves-block waves-light">
+                    <img class="activator" src="images/Madalina.jpg" alt="Madalina's headshot photo">
+                </div>
+                <div class="card-content">
+                    <span class="card-title activator  black-text">Madalina Chiveri<i class="material-icons right">more_vert</i></span>
+
+                </div>
+                <div class="card-reveal cyan">
+                    <span class="card-title white-text text-darken-4">Madalina Chiveri<i class="material-icons right">close</i></span>
+                    <p>My name is Madalina Chiveri, and I am a full-time college student at Miami University. I am a freshman and my major is Games + Simulation with the game art focus. I am from Brunswick, Ohio where I attended Brunswick High School and Cuyahoga Community College studying primarily music. As a freshman in Miami, I am studying interaction design, artistic design, game development, and Russian. My career goals include being an indie game developer and releasing my own video game, for which I am currently writing, creating concept art, and composing music. Thank you so much for visiting our page! We hope you enjoy.</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="col s12 m6">
+            <div class="card">
+                <div class="card-image waves-effect waves-block waves-light">
+                    <img id="Sam" class="activator" src="images/Sam.JPG" alt="Sam's headshot photo">
+                </div>
+                <div class="card-content">
+                    <span class="card-title activator black-text text-darken-3">Sam Sweeney<i class="material-icons right">more_vert</i></span>
+
+                </div>
+                <div class="card-reveal cyan">
+                    <span class="card-title white-text text-darken-4">Sam Sweeney<i class="material-icons right">close</i></span>
+                    <p>Hi, I’m Sam Sweeney. I am from Cincinnati Ohio. I am a Games and Sims Major and I plan to go into game art. I have used many programs such as 3ds max, blender, photoshop, aftereffects, AutoCAD, and SketchUp. I am currently learning to use Illustrator and Game Maker studio 2. I have learned how to use Html, CSS, and a little bit of JavaScript. I like to collect video games. I have over 15 consoles and a Packman arcade cabinet. I also have 4 copies of Star Wars Battle Front 2 (classic 2005) for the PS2, PSP, Xbox and PC. I have one copy for every platform.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col s12 m6">
+
+
+            <div class="card">
+                <div class="card-image waves-effect waves-block waves-light">
+                    <img class="activator" src="images/Kendall.JPG" alt="Kendall's headshot photo">
+                </div>
+                <div class="card-content">
+                    <span class="card-title activator black-text text-darken-3">Kendall Haberman<i class="material-icons right">more_vert</i></span>
+
+                </div>
+                <div class="card-reveal cyan">
+                    <span class="card-title white-text text-darken-4">Kendall Haberman<i class="material-icons right">close</i></span>
+                    <p>My name is Kendall Haberman and I am from Cleveland, Ohio. I am the youngest of three and enjoy spending time with my sisters and my parents. I love dogs and going to the beach to watch the sunset. I like to go out to eat with my friends, especially going to the restaurant Barrio or taking a trip to Starbucks. I was a dancer for 15 years before I came to college, and hope to continue to find a way to dance here too. I also enjoy going to the gym and listening to music. I went to Strongsville High School, where I took part in cheer, dance, Environment Club, and National Honors Society. I graduated high school with honors and plan to accomplish the same thing here at Miami University. I am an Emerging Technology in Business and Design major here, and am learning so much everyday. I am in the honors college and have enjoyed my time here greatly. I want to end up with a job as a social media marketer, or something in that field. I want to connect to others with my work and am looking forward to the places this major can take me.</p>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="col s12 m6">
+
+
+            <div class="card">
+                <div class="card-image waves-effect waves-block waves-light">
+                    <img class="activator" src="images/Davis.jpg" alt="Davis' headshot photo">
+                </div>
+                <div class="card-content">
+                    <span class="card-title activator black-text text-darken-3">Davis Cowper<i class="material-icons right">more_vert</i></span>
+
+                </div>
+                <div class="card-reveal cyan">
+                    <span class="card-title white-text text-darken-4">Davis Cowper<i class="material-icons right">close</i></span>
+                    <p>Hi! My name is Davis Cowper, a Games and Simulation major at Miami University with a focus on development and heavy interest in production. I’ve worked on various projects such as my personal website, a sidescroller minigame, and a pinball prototype. I initially found interest in games at a young age, starting off with the DS and the Wii. I eventually graduated from games such as Wii Sports Resort and Pokemon to Minecraft, Halo, and more on Xbox. Eventually, I became obsessed with Destiny, the newly born child of Bungie’s development team in 2014. I played on and off until about 2019, where I became a hardcore, almost professional player of the game, completing endgame content and challenges routinely. This love and passion brought me to where I am today, attempting to learn the intricacies of development and production in order to deliver that same love and passion of video games to players around the world. In addition to my love of games, I am a mentor in Kode2Learn, a club at Miami University which mentors and teaches elementary age students about the fundamentals of computer science and technology. This experience has helped me grow to understand the challenges of teaching, and developed the ability to assist in challenging academic situations, such as large group development projects or design research. I have a diverse set of skills and talents that would be useful to anyone who needs an organized, knowledgeable, and passionate individual to aid in development, junior mentorship, or principled design work.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col s12 m6 offset-m3">
+
+
+            <div class="card">
+                <div class="card-image waves-effect waves-block waves-light">
+                    <img class="activator" src="images/Adriana.jpg" alt="Adrianna's headshot photo">
+                </div>
+                <div class="card-content">
+                    <span class="card-title activator black-text text-darken-3">Adriana Enriquez<i class="material-icons right">more_vert</i></span>
+
+                </div>
+                <div class="card-reveal cyan">
+                    <span class="card-title white-text text-darken-4">Adriana Enriquez<i class="material-icons right">close</i></span>
+                    <p>Adriana Enriquez is a freshman at Miami University. Adriana is a ETBD major with a Co-major of Art Therapy. She is originally from Mason, Ohio a suburbian town in Cincinnati. She went to William Mason high school before attending Miami University. Adriana enjoys drawing digital art in procreate and playing soccer with her friends in her free time. She hopes to learn how to code and become more advanced in programming. Currently her favorite class is "Art Education" she likes to teach others and is considering pursuing art therapy or graphic design. Adding a friendly companion to Adriana's family is Toby a 2 year old golden doodle.</p>
+                </div>
+            </div>
+
+        </div>
+        <br>
+        <hr>
+
+        <div class="row">
+            <div class="col s12">
+                <!-- Contact Us -->
+
+                <section id="contact" class="section section-contact scrollspy">
+                    <h3 id="top"> Come Join Us!</h3>
+
+                    <div class="row">
+                        <form action="https://formsubmit.co/cowperdr@miamioh.edu" method="POST" class="col s12">
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <i class="material-icons prefix">account_circle</i>
+                                    <input id="icon_prefix" type="text" name="name" class="validate cyan">
+                                    <label for="icon_prefix">First Name</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <i class="material-icons prefix">name</i>
+                                    <input id="icon_prefix" type="text" name="name" class="validate cyan">
+                                    <label for="icon_prefix">Last Name</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <i class="material-icons prefix">email</i>
+                                    <input id="icon_prefix" type="text" name="email" class="validate cyan">
+                                    <label for="icon_prefix">Email</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <i class="material-icons prefix">phone</i>
+                                    <input id="icon_telephone" type="tel" class="validate cyan" name="phone">
+                                    <label for="icon_telephone">Telephone</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <i class="material-icons prefix">business</i>
+                                    <input id="icon_prefix" type="text" name="name" class="validate cyan">
+                                    <label for="icon_prefix">LinkedIn Profile</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <i class="material-icons prefix">web</i>
+                                    <input id="icon_prefix" type="text" name="name" class="validate cyan">
+                                    <label for="icon_prefix">Website</label>
+                                </div>
+
+                                <div class="input-field col s12">
+                                    <form>
+                                        <p for="fileUpload">Upload Resume / CV</p>
+                                        <input type="file" id="fileUpload" />
+                                    </form>
+
+                                </div>
+
+                                <div class="input-field col s12">
+                                    <i class="material-icons prefix">message</i>
+                                    <textarea id="textarea1" class="materialize-textarea cyan" name="comment"></textarea>
+                                    <label for="textarea1">How'd you hear about us?</label>
+
+                                </div>
+
+                                <div class="input-field col s6" id="submitJoin">
+                                    <button class="btn-grad" name="submit" type="submit">submit</button>
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- footer -->
+                    <footer>
+                        <hr>
+                        Copyright &copy; 2022 IMS 222 e(TBD)
+                    </footer>
+
+
+
+
+            </div>
