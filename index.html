@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+
+<!--Home Page of Disruptive Tech website-->
+
+
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>THE BLUE ONE</title>
+
+    <!-- CSS  -->
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!----this is head part---->
+
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.sidenav').sidenav();
+            $('.slider').slider();
+
+            $('.scrollspy').scrollSpy();
+            $('.parallax').parallax();
+            $('.tap-target').tapTarget();
+        });
+    </script>
+
+</head>
+<style>
+    .row {
+        margin-left: 20%;
+    }
+
+    .chip {
+
+        margin: 5%;
+        font-size: 150%;
+        display: inline-flex;
+
+    }
+
+    .slider .indicators .indicator-item.active {
+        background-color: #01ffec;
+    }
+
+    #pageRef {
+        width: 60%;
+        padding: inherit;
+    }
+
+    #teamPic {
+        width: 100%;
+        margin-bottom: 20%;
+    }
+
+    body {
+        background-position: center;
+
+    }
+</style>
+
+
+<body>
+    <!----THIS IS THE BODY---->
+
+
+
+    <body style="<backgroud-color: lightslategrey">
+        <h1 id="top">Home</h1>
+
+
+        <hr>
+
+        <!--
+        
+      
+        <!-- menubar -->
+        <ul id="menubar">
+            <li><a class="menu" href="index.html">Home</a></li>
+            <li><a class="menu" href="info.html">Info</a></li>
+            <li><a class="menu" href="faq.html">Frequently Asked Questions</a></li>
+            <li><a class="menu" href="about.html">About Our Team</a></li>
+            <li><a class="menu" href="contact.html">Contact Us</a></li>
+        </ul>
+
+
+        <hr>
+        <!-- Slider -->
+        <div class="container">
+            <section class="slider">
+                <ul class="slides">
+                    <li>
+                        <img src="images/pexels-adrien-olichon.jpg"> <!-- random image -->
+                        <div class="caption center-align">
+                            <h1>Welcome to Disrupt.Games</h1>
+                            <h5 class="light grey-text text-lighten-3" id="slideSubhead">A class project for IMS 222.</h5>
+
+
+
+
+                        </div>
+                    </li>
+                    <li>
+                        <img src="images/pexels-adrien-olichon.jpg"> <!-- random image -->
+                        <div class="caption center-align">
+                            <h1>We'll cover plenty of topics.</h1>
+                            <h5 class="light grey-text text-lighten-3" id="slideSubhead">You're gonna learn so much about Games!</h5>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="images/pexels-adrien-olichon.jpg"> <!-- random image -->
+                        <div class="caption center-align">
+                            <h1>A Repo of Games Info</h1>
+                            <h5 class="light grey-text text-lighten-3" id="slideSubhead">From esports to new gamers, we've got you covered. </h5>
+
+                        </div>
+                    </li>
+                    <li>
+                        <img src="images/pexels-adrien-olichon.jpg"> <!-- random image -->
+                        <div class="caption center-align">
+                            <h1>e(TBD) Sprint 2</h1>
+                            <h5 class="light grey-text text-lighten-3" id="slideSubhead">Student-Built, Run, and Funded. AND. FUNDED.</h5>
+                            <br>
+
+
+                        </div>
+                    </li>
+
+                </ul>
+            </section>
+        </div>
+
+        <hr>
+
+        <br><br><br>
+
+        <a class="scale-transition waves-effect waves-light btn cyan" onclick="$('.tap-target').tapTarget('open')">One More Thing, Before you explore</a>&nbsp;&nbsp;&nbsp;&nbsp;
+
+        <br><br><br><br>
+        <hr>
+
+
+        <div class="row">
+
+
+            <div class="column">
+                <img class="circle responsive-img" src="images/pacman.png" alt="pacman" style="width:100%">
+            </div>
+            <div class="column">
+                <h3 class="subheading"><u>A Brief History of Games</u></h3>
+                <br>
+                <ul>The general history of video games has evolved from a story of nerds experimenting with technology to a diverse culture of gamers who enjoy a wide variety of stories and experiences created by some of the most talented and technically skilled people in the world.</ul>
+                <br>
+
+                <a class="btn-grad" id="pageRef" href="info.html">Info Page</a>
+            </div>
+        </div>
+
+        <hr>
+
+
+
+
+
+        <div class="row">
+            <div class="column">
+                <img class="circle responsive-img" src="images/Question1.jpg" alt="question" style="width:100%">
+            </div>
+            <div class="column">
+                <h3 class="subheading"><u>Frequently Asked Questions</u></h3>
+                <br>
+                <ul>This page will provide answers to frequently asked questions about video games, communities, how games function in general, and more. </ul>
+                <br>
+
+                <a class="btn-grad" id="pageRef" href="faq.html">FAQ Page</a>
+            </div>
+        </div>
+
+        <hr>
+
+
+
+
+        <div class="row">
+            <div class="column">
+                <img class="circle responsive-img" src="images/team.jpg" alt="team" id="teamPic">
+
+            </div>
+            <div class="column">
+                <h3><u>About Our Team</u></h3>
+                <br>
+                <ul>Meet the team who brought you the information presented on this website! We're a class-formed group who is passionate about new technologies, and specifically with a love for video games in general.</ul>
+                <br>
+                <a class="btn-grad" id="pageRef" href="about.html">About Us Page</a>
+
+
+
+
+            </div>
+
+        </div>
+        <hr>
+
+
+        <!--This is the Contact form section -->
+
+
+        <div class="row">
+            <div class="column">
+                <img class="circle responsive-img" src="images/contact.jpg" alt="contact" style="width:100%">
+            </div>
+            <div class="column">
+                <h3 class="subheading"><u>Contact Us</u></h3>
+                <br>
+                <ul>Contact us here with any questions and comments you might have for us! We'll be happy to answer as much as we reasonably can. </ul>
+                <br>
+
+                <a class="btn-grad" id="pageRef" href="contact.html">Contact Page</a>
+
+                <br><br>
+
+
+            </div>
+
+
+            <br>
+            <br>
+
+            <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+                <a id="menu" class="btn btn-floating btn-large cyan">
+                    <i class="material-icons">menu</i>
+                </a>
+            </div>
+
+
+            <div class="col s6">
+
+                <div class="tap-target cyan" data-target="menu">
+                    <div class="tap-target-content white-text">
+                        <h5>Trying Things Out</h5>
+                        <p class="white-text">Some features of the site may have bugs, glitches, or other technical mishaps. Feel free to use the Contact form to reach out, and report these. Our team will get to working on them ASAP. Thanks for the help!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+
+
+
+
+
+
+
+
+
+        <a class="btn-grad" href="#top">Go To Top</a>
+
+
+        <!-- footer -->
+        <footer>
+            <hr>
+            Copyright &copy; 2022 IMS 222 e(TBD)
+        </footer>
+        <!--Misc Comments-->
+
+        <!--Type out tag letters for Emmet rather than the full tags of each to avoid autocomplete, then press TAB.-->
+    </body></html>

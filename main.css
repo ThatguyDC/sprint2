@@ -1,0 +1,135 @@
+body {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+
+
+    width: 100%;
+    margin: 15px auto;
+    padding: 15px 25px;
+    border: 3px solid #000000;
+    background-color: #12171c;
+    text-align: center;
+    color: whitesmoke;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #12171c;
+}
+
+li {
+    text-align: center;
+    display: inline-block;
+}
+
+li a {
+
+    color: #ffffff;
+    display: inline-block;
+    padding: 0 1.5em;
+    background-color: black;
+    border: 2px solid #3b0505;
+
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #626060;
+}
+
+hr {
+    width: 80%;
+    border-color: black;
+}
+
+h1,
+h2,
+h3 {
+    color: aqua;
+    font-family: Georgia, Arial, Helvetica;
+}
+
+.header {
+    text-align: center;
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.button {
+    background-color: #3b0505;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    float: auto;
+}
+
+.btn-grad {
+    background-image: linear-gradient(to right, #08c8eb 0%, #ffffff 50%, #000000 100%);
+    margin: auto;
+    width: 20%;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: black;
+    border-radius: 10px;
+    border-color: black;
+    display: block;
+}
+
+.btn-grad:hover {
+    background-position: right center;
+    /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+
+
+.menu {
+    text-align: center;
+    color: white ;
+    background-color: #12171c;
+    border-color: rgb(161, 255, 248);
+}
+
+#submitJoin {
+    margin: auto;
+    width: 100%;
+    padding: inherit;
+
+}
+
+#resumeUpload {
+    float: left;
+    margin: auto;
+    margin-top: 0%;
+    border: 2px solid black;
+}
