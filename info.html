@@ -34,6 +34,165 @@
 
     </script>
 
+    <script>
+        /*
+    
+    //write your javascript code here
+        
+        ==================
+            COMMENTS
+            
+    
+    story or not, more or less free time, and speed preference.
+
+    
+    
+    Game Genres to reccomend:
+        -------------
+    moba - LoL
+        less time
+        faster speed 
+        no story
+        
+        
+        
+    rpg - elden ring
+    
+        more time
+        slower speed
+        story
+        
+        
+    open world - Horizon Zero Dawn 
+    
+        more time
+        slower speed
+        story
+      
+        ---------------
+    fps -CoD
+    
+        less time
+        faster speed
+        story
+        
+        
+    rts - Halo Wars 2
+    
+        more time
+        slower speed
+        story
+        
+    mmo - planetside 2
+        
+        more time
+        faster speed 
+        no story
+        
+        -------------------
+    simulation - UEBS 2
+    
+        less time 
+        slower speed
+        no story   
+        
+        
+              */
+
+        //==================
+
+        function gameReccomend() {
+            let freeTime = parseFloat(document.getElementById("freeTime").value);
+            let storyBased = document.getElementById("storyBased").value;
+            let genreArray = [];
+            let storyArray = [];
+            let timeArray = [];
+            let speedArray = [];
+
+            let suggestArray = [];
+            let reccomendation;
+
+            //==================
+
+            //First, create an array of all our options, and sort the array based on pre-defined categories listed above. 
+            genreArray = ["MOBA", "RPG", "Open-World", "FPS", "RTS", "MMO", "Simulation"];
+            /*              [0      1          2         3      4      5          6]
+
+            
+            Next, check if the player wants a story or not. This can eliminate lots of options quickly without having to sort for more common preferences.
+            yes, or no. 
+            =========STORY SORT============*/
+
+
+            if (storyBased == "yes") {
+                storyArray = [genreArray[1, 2, 3, 4]];
+            } else if (storyBased == "no") {
+                storyArray = [genreArray[0, 5, 6]];
+            }
+
+            /*Then, sort for time commitment. If the player doesn't have time to play a genre, then why reccomend one that becomes a part-time job to play?
+            10+ hours, or <10 hours.
+            ============FREE TIME SORT============*/
+
+
+            if (freeTime >= 10) {
+                timeArray = [genreArray[1, 2, 4, 5]];
+            } else if (freeTime <= 10) {
+                timeArray = [genreArray[0, 3, 6]];
+            }
+
+            /*Finally, check for game speed. This narrows the type of games down significantly to a choice that the player would likely connect with based on personal preference alone.
+            faster, or slower.    
+            ============GAME SPEED SORT============*/
+
+            if (gameSpeed == "faster") {
+                speedArray = [genreArray[0, 3, 5]];
+            } else if (gameSpeed == "slower") {
+                speedArray = [genreArray[1, 2, 4, 6]];
+            }
+            /*to get a result, set 'reccomendation' a given value in genreArray based on pre-estabished conditions above. 
+            ===============FINAL SORTING STATEMENT===============*/
+
+            suggestArray = storyArray.concat(timeArray, speedArray);
+            reccomendation = removeDupes(suggestArray);
+
+
+            //output
+            document.getElementById("reccomendation").value = "We reccommend these genres of games:  " + reccomendation;
+
+        }
+
+
+
+        //Once the arrays are combined into a final list, remove any duplicate values that were mashed together. 
+        function removeDupes(suggestArray) {
+
+            return suggestArray.filter((item, index) => suggestArray.indexOf(item) === index);
+        }
+
+
+
+
+        //If a user wants to start over or try for another reccomendation, clear all text entries to allow them to do so. 
+        function clearPrefs() {
+            let freeTime = document.getElementById("freeTime").value = "";
+            let gameSpeed = document.getElementById("gameSpeed").value = "";
+            let storyBased = document.getElementById("storyBased").value = "";
+            let reccomendation = document.getElementById("reccomendation").value = "";
+        }
+
+
+
+        //-- - Button Function Calls-- -
+
+        window.onload = function() {
+            document.getElementById("reccomend").onclick = gameReccomend;
+            document.getElementById("clear").onclick = clearPrefs;
+        }
+
+    </script>
+
+
 </head>
 <style>
     .images {
@@ -42,6 +201,10 @@
 
     .btn tooltipped {
         border-color: aqua;
+    }
+
+    .responsive-video {
+        display: none;
     }
 
     #moreInfo {
@@ -178,6 +341,26 @@
                         <img class="circle" src="images/Game-Development.jpeg" alt="Game Dev Cycle" width="80%" height="300">
                     </div>
                 </div>
+            </div>
+            <div class="row">
+
+                <section class="genreFinder">
+
+                    <h1>Genre Finder</h1>
+                    <h2>Enter your preferences, and click 'reccomend' to find a game genre!</h2>
+                    <label for="freeTime">How much free time do you have per week? (hours)</label>
+                    <input class="cyan accent-2 text" type="text" id="freeTime"><br>
+                    <label for="gameSpeed">What speed of game do you enjoy? (faster or slower)</label>
+                    <input class="cyan accent-2 text" type="text" id="gameSpeed"><br>
+                    <label for="storyChoice">Do you like story-based games? (yes/no)</label>
+                    <input class="cyan accent-2 text" type="text" id="storyBased"><br><br><br><br><br>
+                    <label for="reccomendation">Your Reccomendation:</label>
+                    <input class="cyan accent-2 text" type="text" id="reccomendation"><br>
+
+                    <label>&nbsp;</label>
+                    <input class="btn-grad" type="button" id="reccomend" value="Reccomend">
+                    <input class="btn-grad" type="button" id="clear" value="Clear"><br>
+                </section>
             </div>
 
 
