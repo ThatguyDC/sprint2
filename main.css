@@ -35,8 +35,8 @@ li a {
     color: #ffffff;
     display: inline-block;
     padding: 0 1.5em;
-    background-color: black;
-    border: 2px solid #3b0505;
+    border: 2px solid;
+    border-color: darkgoldenrod;
 
     border-radius: 5px;
     text-decoration: none;
@@ -60,6 +60,11 @@ h3 {
 
 .header {
     text-align: center;
+}
+
+
+.headerTitle {
+    color: white;
 }
 
 .column {
@@ -115,10 +120,11 @@ h3 {
 
 .menu {
     text-align: center;
-    color: white ;
+    color: white;
     background-color: #12171c;
-    border-color: rgb(161, 255, 248);
+    border-color: darkgoldenrod;
 }
+
 
 #submitJoin {
     margin: auto;

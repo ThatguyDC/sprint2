@@ -19,16 +19,21 @@
         <!--  Scripts-->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <!-- Fotorama from CDNJS, 19 KB -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
         <script>
             $(document).ready(function() {
                 $('.sidenav').sidenav();
                 $('.slider').slider();
-                $(".button-collapse").sideNav();
                 $('.scrollspy').scrollSpy();
                 $('.parallax').parallax();
             });
 
         </script>
+
+
+
     </head>
     <style>
         #contactForm {
@@ -59,7 +64,7 @@
         <!----THIS IS THE BODY---->
 
         <body style="<backgroud-color: lightslategrey">
-            <h1 id="top">Get In Touch</h1>
+            <h1 class="headerTitle" id="top">Get In Touch</h1>
             <hr>
 
             <!--Menu Bar-->
@@ -76,19 +81,43 @@
             <br>
             <br>
             <br>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3078.212190042645!2d-84.73496676272885!3d39.50970038630505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88403d0af59465c7%3A0xff423fec6675f5a8!2sLaws%20Hall%2C%20551%20E%20High%20St%2C%20Oxford%2C%20OH%2045056!5e0!3m2!1sen!2sus!4v1662467328549!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-            <!--This is the Contact form section -->
+            <h5> Our location is room 116 in Laws Hall. Fill out the form to contact our team.</h5>
+            <br>
+
+
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3078.212190042645!2d-84.73496676272885!3d39.50970038630505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88403d0af59465c7%3A0xff423fec6675f5a8!2sLaws%20Hall%2C%20551%20E%20High%20St%2C%20Oxford%2C%20OH%2045056!5e0!3m2!1sen!2sus!4v1662467328549!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            
+            <br><br><br>
+
+
+
+         
 
 
             <div class="row">
 
-                <h4> Our location is room 116 in Laws Hall. Fill out the form to contact our team.</h4>
+
+
+                <!-- Add images to <div class="fotorama"></div> -->
+                <div class="container">
+                    <div class="fotorama" data-width="100%" data-height="100%" data-fit="cover" data-autoplay="true" data-nav="thumbs" data-navposition="bottom">
+
+                        <img src="images/miami1.jpg">
+                        <img src="images/miami2.png">
+                        <img src="images/miami3.jpg">
+                        <img src="images/miami4.jfif">
+                        <img src="images/iami5.jpg">
+
+                    </div>
+                </div>
+
 
                 <!-- Contact Us -->
 
                 <section id="contact" class="section section-contact scrollspy">
-                    <h3 id="top"> Reach Out!</h3>
+                    <h3 class="headerTitle" id="top"> Reach Out!</h3>
                     <div class="container" id="contactForm">
                         <div class="row">
                             <form action="https://formsubmit.co/cowperdr@miamioh.edu" method="POST" class="col s12">
@@ -96,7 +125,7 @@
                                 <div class="col m6">
                                     <div class="input-field col s12">
                                         <i class="material-icons prefix">account_circle</i>
-                                        <input id="icon_prefix" type="text" name="name" class="validate cyan">
+                                        <input id="icon_prefix" type="text" name="name" class="validate white">
                                         <label for="icon_prefix">Name</label>
                                     </div>
                                 </div>
@@ -104,21 +133,21 @@
 
                                 <div class="input-field col s6">
                                     <i class="material-icons prefix">email</i>
-                                    <input id="icon_prefix" type="text" name="email" class="validate cyan">
+                                    <input id="icon_prefix" type="text" name="email" class="validate white">
                                     <label for="icon_prefix">Email</label>
                                 </div>
 
 
                                 <div class="input-field col s6">
                                     <i class="material-icons prefix">phone</i>
-                                    <input id="icon_telephone" type="tel" class="validate cyan" name="phone">
+                                    <input id="icon_telephone" type="tel" class="validate white" name="phone">
                                     <label for="icon_telephone">Telephone</label>
                                 </div>
 
 
                                 <div class="input-field col s6">
                                     <i class="material-icons prefix">message</i>
-                                    <textarea id="textarea1" class="materialize-textarea cyan" name="comment"></textarea>
+                                    <textarea id="textarea1" class="materialize-textarea white" name="comment"></textarea>
                                     <label for="textarea1">What's your message?</label>
 
                                 </div>
