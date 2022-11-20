@@ -1,8 +1,8 @@
-# sprint2
-IMS 222 Sprint 2 Website
+# Sprint 3
+IMS 222 Sprint 2-3 Website
 
-This is a class project demonstrating the creation of a responsive website.
-The styling here is entirely free to copy, clone, or otherwise entirely rip off. 
+This is a class project demonstrating the creation of a responsive website, and beginning javascript functionality. 
+The styling here is free to copy, but is admittedly unoptimized. Y M M V. 
 To students reading over this at any point, keep going. You got this :)
 
 //hoursWasted = A whole damn lot lol.
