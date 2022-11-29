@@ -1,9 +1,6 @@
 body {
     font-family: Verdana, Arial, Helvetica, sans-serif;
 
-
-    width: 100%;
-    margin: 15px auto;
     padding: 15px 25px;
     border: 3px solid #000000;
     background-color: #12171c;
@@ -15,7 +12,6 @@ body {
 * {
     box-sizing: border-box;
 }
-
 
 ul {
     list-style-type: none;
@@ -48,13 +44,13 @@ li a:hover {
 
 hr {
     width: 80%;
-    border-color: black;
+    border-color: lightgray;
 }
 
 h1,
 h2,
 h3 {
-    color: aqua;
+    color: whitesmoke;
     font-family: Georgia, Arial, Helvetica;
 }
 
@@ -81,7 +77,7 @@ h3 {
 }
 
 .button {
-    background-color: #3b0505;
+
     border: none;
     border-radius: 25px;
     color: white;
@@ -96,17 +92,17 @@ h3 {
 }
 
 .btn-grad {
-    background-image: linear-gradient(to right, #08c8eb 0%, #ffffff 50%, #000000 100%);
+    background-image: linear-gradient(to right, darkgoldenrod 0%, darkgoldenrod 50%, darkgoldenrod 100%);
     margin: auto;
     width: 20%;
-    padding: 15px 45px;
+    padding: inherit;
     text-align: center;
     text-transform: uppercase;
     transition: 0.5s;
     background-size: 200% auto;
     color: black;
     border-radius: 10px;
-    border-color: black;
+    border-color: #12171c;
     display: block;
 }
 
@@ -139,3 +135,5 @@ h3 {
     margin-top: 0%;
     border: 2px solid black;
 }
+
+1
