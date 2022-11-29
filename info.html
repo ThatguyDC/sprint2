@@ -1,15 +1,14 @@
 <!DOCTYPE html>
-<!--this is in sprint 1 -->
-
-<!--Info Page of Disruptive Tech website-->
-
-<html lang="en">
+<html>
 
 <head>
-
     <meta charset="UTF-8">
-    <title>THE BLUE ONE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sprint 3 e(TBD)</title>
+    
+    
     <link rel="stylesheet" href="main.css">
+    <link rel="icon" href="images/e(TBD)_icon.png">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
@@ -31,241 +30,67 @@
             $('.tooltipped').tooltip();
             */
         });
-    </script>
 
-    <script>
-        /*
-    
-    //write your javascript code here
-        
-        ==================
-            COMMENTS
-            
-    
-    story or not, more or less free time, and speed preference.
-
-    
-    
-    Game Genres to reccomend:
-        -------------
-    moba - LoL
-        less time
-        faster speed 
-        no story
-        
-        
-        
-    rpg - elden ring
-    
-        more time
-        slower speed
-        story
-        
-        
-    open world - Horizon Zero Dawn 
-    
-        more time
-        slower speed
-        story
-      
-        ---------------
-    fps -CoD
-    
-        less time
-        faster speed
-        story
-        
-        
-    rts - Halo Wars 2
-    
-        more time
-        slower speed
-        story
-        
-    mmo - planetside 2
-        
-        more time
-        faster speed 
-        no story
-        
-        -------------------
-    simulation - UEBS 2
-    
-        less time 
-        slower speed
-        no story   
-        
-        
-              */
-    
-        
-
-        //==================
-
-        function gameReccomend() {
-            let freeTime = parseFloat(document.getElementById("freeTime").value);
-            let storyBased = document.getElementById("storyBased").value;
-            let genreArray = [];
-            let storyArray = [];
-            let timeArray = [];
-            let speedArray = [];
-
-            let suggestArray = [];
-            let reccomendation;
-
-            //==================
-
-            //First, create an array of all our options, and sort the array based on pre-defined categories listed above. 
-            genreArray = ["MOBA", "RPG", "Open-World", "FPS", "RTS", "MMO", "Simulation"];
-            /*              [0      1          2         3      4      5          6]
-
-            
-            Next, check if the player wants a story or not. This can eliminate lots of options quickly without having to sort for more common preferences.
-            yes, or no. 
-            =========STORY SORT============*/
-
-
-            if (storyBased == "yes") {
-                storyArray = [genreArray[1, 2, 3, 4]];
-            } else if (storyBased == "no") {
-                storyArray = [genreArray[0, 5, 6]];
-            }
-
-            /*Then, sort for time commitment. If the player doesn't have time to play a genre, then why reccomend one that becomes a part-time job to play?
-            10+ hours, or <10 hours.
-            ============FREE TIME SORT============*/
-
-
-            if (freeTime >= 10) {
-                timeArray = [genreArray[1, 2, 4, 5]];
-            } else if (freeTime <= 10) {
-                timeArray = [genreArray[0, 3, 6]];
-            }
-
-            /*Finally, check for game speed. This narrows the type of games down significantly to a choice that the player would likely connect with based on personal preference alone.
-            faster, or slower.    
-            ============GAME SPEED SORT============*/
-
-            if (gameSpeed == "faster") {
-                speedArray = [genreArray[0, 3, 5]];
-            } else if (gameSpeed == "slower") {
-                speedArray = [genreArray[1, 2, 4, 6]];
-            }
-            /*to get a result, set 'reccomendation' a given value in genreArray based on pre-estabished conditions above. 
-            ===============FINAL SORTING STATEMENT===============*/
-
-            suggestArray = storyArray.concat(timeArray, speedArray);
-            reccomendation = removeDupes(suggestArray);
-
-
-            //output
-            document.getElementById("reccomendation").value = "We reccommend these genres of games:  " + reccomendation;
-
-        }
-
-
-
-        //Once the arrays are combined into a final list, remove any duplicate values that were mashed together. 
-        function removeDupes(suggestArray) {
-
-            return suggestArray.filter((item, index) => suggestArray.indexOf(item) === index);
-        }
-
-      
-
-
-
-
-
-        //If a user wants to start over or try for another reccomendation, clear all text entries to allow them to do so. 
-        function clearPrefs() {
-            let freeTime = document.getElementById("freeTime").value = "";
-            let gameSpeed = document.getElementById("gameSpeed").value = "";
-            let storyBased = document.getElementById("storyBased").value = "";
-            let reccomendation = document.getElementById("reccomendation").value = "";
-        }
-        
-               //*******This is the image swap**********//
-        
-     
-        function imageSwap(evt) {
-
-            document.getElementById("image").src = this.href;
-            document.getElementById("caption").innerHTML = this.title;
-
-            //cancelling default hyperlink action
-            if (evt.preventDefault) {
-                evt.preventDefault();
-            } else {
-                evt.returnValue = false;
-            }
-
-
-        }
-
-
-
-        //****Button Function Calls****//
-
-        window.onload = function() {
-            
-            
-            
-             //****Image Selector****//
-         let images = document.getElementById("image_list").getElementsByTagName("a");
-            //images = [a,a,a,a,a,a,a]
-
-            for (i = 0; i < images.length; i++) {
-
-                images[i].onclick = imageSwap;
-            }
-            
-            
-            document.getElementById("reccomend").onclick = gameReccomend;
-            document.getElementById("clear").onclick = clearPrefs;
-        }
-
-       
     </script>
 
 
 
+    <style>
+        body {
+            width: 80%;
+            margin: auto;
+            border: none;
+        }
 
 
 
+        .genreFinder {
 
+            border: 2px solid;
+            border-color: darkgoldenrod;
+            border-radius: 25px;
+
+        }
+
+        .collapsible {
+
+
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            color: white;
+            background-color: #12171c;
+            border-color: #12171c;
+            text-align: center;
+            outline: none;
+            font-size: 30px;
+        }
+
+        .active {
+            background-color: #05090d;
+        }
+
+        .collapsible:hover {
+            background-color: darkgoldenrod;
+        }
+
+        .content {
+            padding: 0 18px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+
+        }
+
+    </style>
 </head>
-<style>
-    .images {
-        display: inline-block;
-    }
-
-    .btn tooltipped {
-        border-color: aqua;
-    }
-
-    .responsive-video {
-        display: none;
-    }
-    
-    .genreFinder {
-        border: 2px solid;
-        border-color: darkgoldenrod;
-        border-radius: 25px;
-    }
-
-    #moreInfo {
-        margin-top: 20px;
-        color: white;
-        border-color: darkgoldenrod;
-    }
-</style>
 
 <body>
-    <!----THIS IS THE BODY---->
 
     <body style="<backgroud-color: darkgray">
-        <h1 class="headerTitle" id="top">Games Information</h1>
+        <h1 class="headerTitle" id="top"> Information</h1>
+
+
         <hr>
         <!--Menu Bar-->
         <ul id="menubar">
@@ -275,42 +100,62 @@
             <li><a class="menu" href="about.html">About Our Team</a></li>
             <li><a class="menu" href="contact.html">Contact Us</a></li>
         </ul>
-
-
-
         <hr>
 
-        <div class="row">
-            <div class="column">
-                <br>
-                <iframe width="80%" height="300" class="responsive-video" src="https://www.youtube.com/embed/dd8zhQ1jaZU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <div class="column">
-                <h3 class="subheading"><u class="headerTitle">General Information: Video Games in the Modern Age</u></h3>
-                <ul>As games continue to amass audiences in the millions, many of those that are most successful offer features such as reactive digital/social contact, as seen in Destiny 2: Lightfall. This allows for friends to experience a story together, as well as commit more heavily to role playing elements within it.</ul>
 
-                <ul>For example, within this summary of a Dev team interview, social features such as Guardian ranks, in-game LFG, and more are previewed, informing players on how to connect with their friends through Destiny. </ul>
-                <li><a id="moreInfo" href="https://www.bungie.net" target="blank">More Info about Destiny 2's Social Features</a></li>
+        <br><br>
 
-            </div>
-            <div class="row">
+        <h3>Click Below to Expand </h3>
+        <hr>
+
+
+
+        <button class="collapsible">For Starters</button>
+        <div class="content">
+            <div class="container">
+                <div class="column">
+                    <br>
+                    <iframe width="80%" height="300" class="responsive-video" src="https://www.youtube.com/embed/dd8zhQ1jaZU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="column">
+                    <h3 class="subheading"><u class="headerTitle">General Information: Video Games in the Modern Age</u></h3>
+                    <ul>As games continue to amass audiences in the millions, many of those that are most successful offer features such as reactive digital/social contact, as seen in Destiny 2: Lightfall. This allows for friends to experience a story together, as well as commit more heavily to role playing elements within it.</ul>
+
+                    <ul>For example, within this summary of a Dev team interview, social features such as Guardian ranks, in-game LFG, and more are previewed, informing players on how to connect with their friends through Destiny. </ul>
+
+                    <br><br>
+
+                    <li><a id="moreInfo" href="https://www.bungie.net" target="blank">More Info about Destiny 2's Social Features</a></li>
+
+                </div>
+
                 <div class="column">
                     <br>
                     <br>
                     <img class="circle" src="images/destiny-2-lfg-system.jpg" alt="Destiny 2 LFG system" width="80%" height="300">
                 </div>
+                <hr>
             </div>
-            <hr>
 
-            <div class="row">
+        </div>
+
+
+
+        <button class="collapsible">History of Games </button>
+        <div class="content">
+            <div class="container">
                 <div class="column">
                     <br>
                     <iframe width="80%" height="300" class="responsive-video" src="https://www.youtube.com/embed/x24KoVNliMk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div class="column">
-                    <h3 class="subheading"><u class="headerTitle">History of Games Over the Years</u></h3>
-                    <ul>Originally, games on a computer started off as a simple depiction of input movement, such as Pong. Things rapidly developed from there, introducing moving backgrounds, enemies, basic mechanics, and more in arcade-style games like Galaga or Centipede. Eventually, 3D games began to take over the scene, gaining massive popuarity through iteration from Mario, Zelda, and more. Destiny, Call of Duty, Minecraft, League of Legends, and a near infinite amount of games currently dominate the market, though all of these innovations call back to the original principles of games that were thought up all those decades ago. </ul>
+                    <h3 class="subheading"><u class="headerTitle">History of Games Over the Years</u> </h3>
+                    <ul>Originally, games on a computer started off as a simple depiction of input movement, such as Pong. Things rapidly developed from there, introducing moving backgrounds, enemies, mechanics, and more in arcade-style games like Galaga. Eventually, 3D games began to take over the scene, gaining massive popuarity through iteration from Mario, Zelda, and more. Destiny, CoD, Minecraft, League of Legends, and many others currently dominate the market, though all of these innovations call back to the original principles of games that were thought up all those decades ago. </ul>
+
+                    <br><br>
                     <li><a id="moreInfo" href="https://en.wikipedia.org/wiki/History_of_video_games" target="blank">More Info about the History of Games</a></li>
+
+
 
 
                 </div>
@@ -323,8 +168,10 @@
                 </div>
             </div>
             <hr>
-
-            <div class="row">
+        </div>
+        <button class="collapsible">Gaming Communities</button>
+        <div class="content">
+            <div class="container">
                 <div class="column">
                     <br>
                     <iframe width="80%" height="300" class="responsive-video" src="https://www.youtube.com/embed/4Z2iTGl7QrY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -332,7 +179,10 @@
                 <div class="column">
                     <h3 class="subheading"><u class="headerTitle">Communities in Gaming</u></h3>
                     <ul>Communities in gaming come in all sizes and in diverse ranges of people. For example in the photo to the right, a League of Legends tournament is taking place, with thousands of fans cheering either team that's competing. While it's not neccesarily a large event compared to things like the Super Bowl or the World Cup, there are millions of fans that you can't see watching from home, in class, at work, and more. After the tournament, the experience doesn't end. Players can go and replicate what they saw their favorite players doing in-game with their friends, and spend days on end telling stories about their favorite moments. That's what the communities in gaming are all about. </ul>
+                    <br><br>
                     <li><a id="moreInfo" href="https://lolesports.com/" target="blank">More Info about Communities in Gaming</a></li>
+
+
 
                 </div>
                 <div class="row">
@@ -344,8 +194,10 @@
                 </div>
             </div>
             <hr>
-
-            <div class="row">
+        </div>
+        <button class="collapsible">Financial Success of Games</button>
+        <div class="content">
+            <div class="container">
                 <div class="column">
                     <br>
                     <iframe width="80%" height="300" class="responsive-video" src="https://www.youtube.com/embed/OS4m2O3V93o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -353,6 +205,9 @@
                 <div class="column">
                     <h3 class="subheading"><u class="headerTitle">Games and Financial Success</u></h3>
                     <ul> There's no denying it: modern gaming today makes more money overall and has more invested into its success than the GDP of some countries. For example, Microsoft recently purchased ABK, better known as Activistion-Blizzard, for around $70 Billion, proving the long-term viability of games created by large studios, and of the industry in general. </ul>
+
+                    <br><br>
+
                     <li><a id="moreInfo" href="https://en.wikipedia.org/wiki/List_of_best-selling_video_games" target="blank">More Info about Games and Financial Success</a></li>
 
                 </div>
@@ -365,82 +220,86 @@
                 </div>
             </div>
             <hr>
+        </div>
 
-            <div class="row">
+
+        <button class="collapsible">The Future Of Gaming, and Beyond</button>
+        <div class="content">
+            <div class="container">
                 <div class="column">
                     <br>
                     <iframe width="80%" height="300" class=" responsive-video" src="https://www.youtube.com/embed/zmb2FJGvnAw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div class="column">
                     <h3 class="subheading"><u class="headerTitle">The Future of Gaming</u></h3>
-                    <ul>As games continue to amass audiences in the millions, many of those that are most successful offer features such as reactive digital/social contact, as seen in Destiny 2: Lightfall. This allows for friends to experience a story together, as well as commit more heavily to role playing elements within it.</ul>
+                    <ul>As games continue to amass audiences in the millions, many of those that are most successful offer features such as reactive digital/social contact, as seen in Destiny 2: Lightfall. This allows for friends to experience a story together, as well as commit more heavily to role playing elements within it.For example, within this summary of a Dev team interview, social features such as Guardian ranks, in-game LFG, and more are previewed, informing players on how to connect with their friends through Destiny. </ul>
 
-                    <ul>For example, within this summary of a Dev team interview, social features such as Guardian ranks, in-game LFG, and more are previewed, informing players on how to connect with their friends through Destiny. </ul>
+                    <br><br>
+
                     <li><a id="moreInfo" href="https://www.gameinformer.com/" target="blank">More Info about The Future of Games</a></li>
 
                 </div>
-                <div class="row">
-                    <div class="column">
-                        <br>
-                        <br>
-                        <img class="circle" src="images/Game-Development.jpeg" alt="Game Dev Cycle" width="80%" height="300">
-                    </div>
+
+                <div class="column">
+                    <br>
+
+                    <img class="circle" src="images/Game-Development.jpeg" alt="Game Dev Cycle" width="80%" height="300">
                 </div>
             </div>
-
-            <div class="container">
-                <div class="row">
-
-                    <section class="genreFinder">
-
-                        <h1 class="headerTitle">Genre Finder</h1>
-                        <h3 class="headerTitle">Enter your preferences, and click 'reccomend' to find a game genre!</h3>
-                        <label for="freeTime">How much free time do you have per week? (hours)</label>
-                        <input class="white accent-4  grey-text" type="text" id="freeTime"><br>
-                        <label for="gameSpeed">What speed of game do you enjoy? (faster or slower)</label>
-                        <input class="white accent-2 amber-text" type="text" id="gameSpeed"><br>
-                        <label for="storyChoice">Do you like story-based games? (yes/no)</label>
-                        <input class="white accent-2 amber-text" type="text" id="storyBased"><br><br><br><br><br>
-                        <label for="reccomendation">Your Reccomendation:</label>
-                        <input class="white accent-2 amber-text" type="text" id="reccomendation"><br>
-
-                        <label>&nbsp;</label>
-                        <input class="btn-grad" type="button" id="reccomend" value="Reccomend">
-                        <input class="btn-grad" type="button" id="clear" value="Clear"><br>
-                    </section>
-                </div>
-            </div>
-
-            <div class="container">
-                <div class="row">
-                    <!-- Image Swap -->
-
-                    <!--moba, rpg, open world, fps, rts, mmo, simulation -->
-
-                    <h4 class="">Genre Examples</h4>
-                    <h5 id="caption">League of Legends - Multiplayer Online Battle Arena</h5>
-                    <p><img src="images/genrePics/moba.webp" width=80% height=300px alt="" id="image"></p>
-                    <ul id="image_list">
-                        <li><a href="images/genrePics/moba.webp" title="League of Legends - MOBA" id="first_link">
-                                <img src="images/thumbnails/moba.webp" width=100% height=40px alt=""></a></li>
-                        <li><a href="images/genrePics/rpg.jpg" title="Elden Ring - Role Playing Game">
-                                <img src="images/thumbnails/rpg.jpg" width=100% height=40px alt=""></a></li>
-                        <li><a href="images/genrePics/openworld.jpg" title="Horizon Zero Dawn - Open World">
-                                <img src="images/thumbnails/openworld.jpg" width=100% height=40px alt=""></a></li>
-                        <li><a href="images/genrePics/fps.jpg" title="CoD Modern Warfare 2 - First Person Shooter">
-                                <img src="images/thumbnails/fps.jpg" width=100% height=40px alt=""></a></li>
-                        <li><a href="images/genrePics/rts.webp" title="Halo Wars 2 - Real Time Strategy">
-                                <img src="images/thumbnails/rts.webp" width=100% height=40px alt=""></a></li>
-                        <li><a href="images/genrePics/mmo.jpg" title=" Planetside 2 - Massive Multiplayer Online">
-                                <img src="images/thumbnails/mmo.jpg" width=100% height=40px alt=""></a></li>
-
-                    </ul>
-                </div>
-            </div>
-         
-
         </div>
 
+
+
+        <div class="container">
+            <div class="row">
+
+                <section class="genreFinder">
+
+                    <h1 class="headerTitle">Genre Finder</h1>
+                    <h3 class="headerTitle">Enter your preferences, and click 'reccomend' to find a game genre!</h3>
+                    <label for="freeTime">How much free time do you have per week? (hours)</label>
+                    <input class="white accent-4  grey-text" type="text" id="freeTime"><br>
+                    <label for="gameSpeed">What speed of game do you enjoy? (faster or slower)</label>
+                    <input class="white accent-2 grey-text" type="text" id="gameSpeed"><br>
+                    <label for="storyChoice">Do you like story-based games? (yes/no)</label>
+                    <input class="white accent-2 grey-text" type="text" id="storyBased"><br><br><br><br><br>
+                    <label for="reccomendation">Your Reccomendation:</label>
+                    <input disabled class="white accent-2 amber-text" type="text" id="reccomendation"><br>
+
+                    <label>&nbsp;</label>
+                    <input class="btn-grad" type="button" id="reccomend" value="Reccomend">
+                    <input class="btn-grad" type="button" id="clear" value="Clear"><br>
+                </section>
+            </div>
+        </div>
+
+        <script>
+            /*This code was provided by W3 Schools here:
+            
+            https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_collapsible_animate
+            
+            If you have questions or concerns about this addition, please 
+            reach out to the project creators through the contact form
+            present on the site. 
+            
+            
+            */
+            var coll = document.getElementsByClassName("collapsible");
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+                coll[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                    }
+                });
+            }
+
+        </script>
 
         <!-- footer -->
         <footer>
@@ -448,4 +307,7 @@
             Copyright &copy; 2022 IMS 222 e(TBD)
         </footer>
 
-    </body></html>
+
+    </body>
+
+</html>
