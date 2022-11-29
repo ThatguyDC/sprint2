@@ -1,18 +1,14 @@
 <!DOCTYPE html>
-
-<!--Home Page of Disruptive Tech website-->
-
-
-
-<html lang="en">
-
+<html>
 <head>
-
     <meta charset="UTF-8">
-    <title>THE BLUE ONE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sprint 3 e(TBD)</title>
     <link rel="stylesheet" href="main.css">
+    <link rel="icon" href="images/e(TBD)_icon.png">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <!----this is head part---->
 
@@ -21,49 +17,76 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script>
         $(document).ready(function() {
-            $('.sidenav').sidenav();
+
             $('.slider').slider();
+            $('.scrollspy').scrollSpy();
+            $('.parallax').parallax();
 
-            $('.scrollspy').scrollSpy()
-            $('.collapsible').collapsible();
+
+            /*
+            $('.tooltipped').tooltip();
+            */
         });
-
     </script>
+
+
+
+    <style>
+        body {
+            width: 80%;
+            margin: auto;
+            border: none;
+        }
+
+
+
+        .genreFinder {
+
+            border: 2px solid;
+            border-color: darkgoldenrod;
+            border-radius: 25px;
+
+        }
+
+        .collapsible {
+
+
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            color: white;
+            background-color: #12171c;
+            border-color: #12171c;
+            text-align: center;
+            outline: none;
+            font-size: 30px;
+        }
+
+        .active {
+            background-color: #05090d;
+        }
+
+        .collapsible:hover {
+            background-color: darkgoldenrod;
+        }
+
+        .content {
+            padding: 0 18px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+
+        }
+    </style>
 </head>
 
-<style>
-    .collapsible,
-    .collapsible-header,
-    .collapsible-body {
-        text-align: center;
-        background-color: #12171c;
-        border-color: white;
-        width: 70%;
-        margin: auto;
-
-    }
-
-    .faqGroup {
-        width: 70%;
-        margin: auto;
-    }
-
-    .faqBox {
-        text-align: center;
-        margin: auto;
-        width: 100%;
-        display: block;
-    }
-
-</style>
-
 <body>
-    <!----THIS IS THE BODY---->
 
-    <body style="<backgroud-color: lightslategrey">
-        <h1 class="headerTitle" id="top">Frequently Asked Questions</h1>
+    <body style="<backgroud-color: darkgray">
+        <h1 class="headerTitle" id="top"> FAQ</h1>
+
+
         <hr>
-
         <!--Menu Bar-->
         <ul id="menubar">
             <li><a class="menu" href="index.html">Home</a></li>
@@ -72,102 +95,141 @@
             <li><a class="menu" href="about.html">About Our Team</a></li>
             <li><a class="menu" href="contact.html">Contact Us</a></li>
         </ul>
-
         <hr>
 
-        <div class=faqBox>
-            <h2 class="headerTitle" id="top"> What the FAQ Is Gaming?</h2>
-        </div>
 
+        <br><br>
 
-        <div class="col s12 m6">
-            <div class="faqGroup">
-
-                <ul class="collapsible">
-                    <li>
-                        <div class="collapsible-header">
-                            <h4 class="">How do I get started gaming?</h4>
-                        </div>
-                        <div class="collapsible-body">
-                            <div class=faqBox><span>The answer is simpler than you think! You can start off by finding out what types of stories you like to experience, or the types of movies you wish you could be apart of. Do you like a slow, methodically told drama? Do you enjoy an action-packed thriller, with tones of war? Do you like puzzle solving, or strategic, board game style tactics? All of these games are out there to play, and you can look up where to experience these games for yourself. A great place to start would be on Steam, which is an online store that houses hundreds of genres of games, with thousands</span></div>
-                        </div>
-                    </li>
+        <h3>Some General Questions</h3>
+        <hr>
 
 
 
-                    <li>
-                        <div class="collapsible-header">
-                            <h4 class="">What impact do games have on our lives? </h4>
-                        </div>
-                        <div class="collapsible-body">
-                            <div class=faqBox><span>Most games have two paths that they lead people down in relation to their lives. Some develop a relationship with their favorite games, getting to know the tiny details and finding the artistic display that is the finished product. The other path is usually addiction, realizing that games can become a significant waste of your time, and a source of depression if relied on too heavily for social interaction. While the latter isn't common, it is something to be aware of. </span></div>
-                        </div>
-                    </li>
+        <button class="collapsible">How do I get started gaming?</button>
+        <div class="content">
+            <div class="container">
+
+                <ul>The answer is simpler than you think! You can start off by finding out what types of stories you like to experience, or the types of movies you wish you could be apart of. Do you like a slow, methodically told drama? Do you enjoy an action-packed thriller, with tones of war? Do you like puzzle solving, or strategic, board game style tactics? All of these games are out there to play, and you can look up where to experience these games for yourself. A great place to start would be on Steam, which is an online store that houses hundreds of genres of games, with thousands of miles away around the world.</ul>
 
 
 
-                    <li>
-                        <div class="collapsible-header">
-                            <h4 class="">What impact do games have on our lives? </h4>
-                        </div>
-                        <div class="collapsible-body">
-                            <div class=faqBox><span>Most games have two paths that they lead people down in relation to their lives. Some develop a relationship with their favorite games, getting to know the tiny details and finding the artistic display that is the finished product. The other path is one of distain, realizing that games can become a significant waste of your time, and a source of depression if relied on too heavily for social interaction. </span></div>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="collapsible-header">
-                            <h4 class="">What is the projected future for games? </h4>
-                        </div>
-                        <div class="collapsible-body">
-                            <div class=faqBox><span>The future of games looks like it's heading toward augmented reality technology, where games we normally play digitally on a screen could have some elements leak into the real world, such as realistic racing simulations, or having a conversation with projected characters. Regardless, the future is exciting for gaming as a whole.</span></div>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="collapsible-header">
-                            <h4 class="">How are games beneficial to players?</h4>
-                        </div>
-                        <div class="collapsible-body">
-                            <div class=faqBox><span>If used properly, games can offer a limitless landscape of storytelling, friendship, and creatively inspiring experiences. They can also help you develop lifelong relationships with people, and help maintain those connections even thousands of miles away around the world. </span></div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="collapsible-header">
-                            <h4 class="">Are there any disadvantages of games?</h4>
-                        </div>
-                        <div class="collapsible-body">
-                            <div class=faqBox><span>While there are many good elements of gaming, we must also acknowledge the negatives. Toxicity in gaming is a very prevalent and very widespread, in many cases directing hatred towards the developers, artists, and producers that help bring gamers' favorite worlds alive. Another blemish on the culture of gaming is the inherent division that comes from fandom. Different groups tend to have arguments, screaming matches, and even things as bad as doxxing happen daily in both the digital and physical worlds, so there is no hiding the obvious that the culture of gaming, like any culture, has some bad elements. </span></div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="collapsible-header">
-                            <h4 class="">How do I get started gaming?</h4>
-                        </div>
-                        <div class="collapsible-body">
-                            <div class=faqBox><span>The answer is simpler than you think! You can start off by finding out what types of stories you like to experience, or the types of movies you wish you could be apart of. Do you like a slow, methodically told drama? Do you enjoy an action-packed thriller, with tones of war? Do you like puzzle solving, or strategic, board game style tactics? All of these games are out there to play, and you can look up where to experience these games for yourself. A great place to start would be on Steam, which is an online store that houses hundreds of genres of games, with thousands </span></div>
-                        </div>
-                    </li>
 
 
 
-                </ul>
 
+
+                <hr>
             </div>
+
+        </div>
+
+
+
+        <button class="collapsible">What impact do games have on our lives?</button>
+        <div class="content">
+            <div class="container">
+
+                <ul>Most games have two paths that they lead people down in relation to their lives. Some develop a relationship with their favorite games, getting to know the tiny details and finding the artistic display that is the finished product. The other path is usually addiction, realizing that games can become a significant waste of your time, and a source of depression if relied on too heavily for social interaction. While the latter isn't common, it is something to be aware of.</ul>
+
+
+
+
+
+
+
+
+                <hr>
+            </div>
+
+        </div>
+
+        <button class="collapsible">What is the projected future for games?</button>
+        <div class="content">
+            <div class="container">
+
+                <ul>The future of games looks like it's heading toward augmented reality technology, where games we normally play digitally on a screen could have some elements leak into the real world, such as realistic racing simulations, or having a conversation with projected characters. Regardless, the future is exciting for gaming as a whole.</ul>
+
+
+
+
+
+
+                <hr>
+            </div>
+
+        </div>
+
+        <button class="collapsible">How are games beneficial to players?</button>
+        <div class="content">
+            <div class="container">
+
+                <ul>If used properly, games can offer a limitless landscape of storytelling, friendship, and creatively inspiring experiences. They can also help you develop lifelong relationships with people, and help maintain those connections even thousands of miles away around the world.</ul>
+
+
+
+
+
+
+
+
+                <hr>
+            </div>
+
+        </div>
+
+        <button class="collapsible">Are there any disadvantages of games?</button>
+        <div class="content">
+            <div class="container">
+
+                <ul>While there are many good elements of gaming, we must also acknowledge the negatives. Toxicity in gaming is a very prevalent and very widespread, in many cases directing hatred towards the developers, artists, and producers that help bring gamers' favorite worlds alive. Another blemish on the culture of gaming is the inherent division that comes from fandom. Different groups tend to have arguments, screaming matches, and even things as bad as doxxing happen daily in both the digital and physical worlds, so there is no hiding the obvious that the culture of gaming, like any culture, has some bad elements.</ul>
+
+
+
+
+
+
+
+
+                <hr>
+            </div>
+
         </div>
 
 
 
 
+        <script>
+            /*This code was provided by W3 Schools here:
+            
+            https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_collapsible_animate
+            
+            If you have questions or concerns about this addition, please 
+            reach out to the project creators through the contact form
+            present on the site. 
+            
+            
+            */
+            var coll = document.getElementsByClassName("collapsible");
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+                coll[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                    }
+                });
+            }
+        </script>
 
 
+        <!-- footer -->
+        <footer>
+            <hr>
+            Copyright &copy; 2022 IMS 222 e(TBD)
+        </footer>
 
-    </body>
-
-    <br><br><br><br><br>
-
-    <!-- footer -->
-    <footer>
-        <hr>
-        Copyright &copy; 2022 IMS 222 e(TBD)
-    </footer>
+    </body></html>
